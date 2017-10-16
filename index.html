@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="pizza.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
+</head>
+<body onload="price()">
+	<h1 style="text-align: center;color: white">PIZZA STORE</h1>
+	<div class="main-content">
+		<div class="builder">
+			<div>
+				<form method="GET">
+					<label>SIZE</label>
+					<div class="field">
+						<select onchange="price()" id="size">
+							<option value=""></option>
+							<option value="large">LARGE</option>
+							<option value="medium">MEDIUM</option>
+							<option value="small">SMALL</option>
+						</select>
+					</div>
+					<label>CRUST</label>
+					<div class="field">
+						<select onchange="price()" id="crust">
+							
+							<option value="PAN PIZZA">PAN PIZZA</option>
+							<option value="HAND TOSSED">HAND TOSSED</option>
+							<option value="THIN N CRISPY">THIN N CRISPY</option>
+							<option value="ORIGINAL STUFFED">ORIGINAL STUFFED(+$1.99)</option>
+						</select>
+					</div>
+					<label>SAUCE</label>
+					<div class="field">
+						<select onchange="price()" id="sauce">
+							
+							<option value="CLASSIC MARINARA">CLASSIC MARINARA</option>
+							<option value="PREMIUM CRUSHED TOMATO">PREMIUM CRUSHED TOMATO</option>
+							<option value="GARLIC PARMESAN">GARLIC PARMESAN</option>
+						</select>
+					</div>
+					<label>CHEESE</label>
+					<div class="field">
+						<select onchange="price()" id="cheese">
+							
+							<option value="0">REGULAR</option>
+							<option value="2">EXTRA(+$2.00)</option>
+							<option value="NO CHEESE">NONE</option>
+						</select>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<h2 style="clear: both;">MEATS</h2>
+					<hr style="clear: both; width: 70%;float: left;">
+
+					<label>PEPPERONI</label>
+					<div class="field">
+						<input type="radio" name="pepperoni" value="0" onchange="price()"> None <br>
+						<input type="radio" name="pepperoni" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="pepperoni" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>SALAMI</label>
+					<div class="field">
+						<input type="radio" name="salami" value="0" onchange="price()"> None <br>
+						<input type="radio" name="salami" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="salami" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>HAM</label>
+					<div class="field">
+						<input type="radio" name="ham" value="0" onchange="price()"> None <br>
+						<input type="radio" name="ham" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="ham" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>BACON</label>
+					<div class="field">
+						<input type="radio" name="bacon" value="0" onchange="price()"> None <br>
+						<input type="radio" name="bacon" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="bacon" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>GRILLED CHICKEN</label>
+					<div class="field">
+						<input type="radio" name="chicken" value="0" onchange="price()"> None <br>
+						<input type="radio" name="chicken" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="chicken" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<h2 style="clear: both;">VEGGIES</h2>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>MUSHROOMS</label>
+					<div class="field">
+						<input type="radio" name="mushrooms" value="0" onchange="price()"> None <br>
+						<input type="radio" name="mushrooms" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="mushrooms" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>ROASTED SPINACH</label>
+					<div class="field">
+						<input type="radio" name="spinach" value="0" onchange="price()"> None <br>
+						<input type="radio" name="spinach" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="spinach" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>RED ONIONS</label>
+					<div class="field">
+						<input type="radio" name="onions" value="0" onchange="price()"> None <br>
+						<input type="radio" name="onions" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="onions" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>OLIVES</label>
+					<div class="field">
+						<input type="radio" name="olives" value="0" onchange="price()"> None <br>
+						<input type="radio" name="olives" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="olives" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>BELL PEPPERS</label>
+					<div class="field">
+						<input type="radio" name="bell" value="0" onchange="price()"> None <br>
+						<input type="radio" name="bell" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="bell" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+					<label>JALAPENO PEPPRS</label>
+					<div class="field">
+						<input type="radio" name="jalapenos" value="0" onchange="price()"> None <br>
+						<input type="radio" name="jalapenos" value="1" onchange="price()"> Regular <br>
+						<input type="radio" name="jalapenos" value="2" onchange="price()"> Extra <br>
+					</div>
+					<hr style="clear: both; width: 70%;float: left;">
+				</form>
+			</div>
+		</div>
+		<div class="result">
+			<h3>Total:</h3><span id="price">$0.00</span>
+			<p>Pizza Details:</p>
+			<p id="details"></p>
+			<p id="errors"></p>
+			<button onclick="checkOut()">Continue</button>
+		</div>
+		<div class="result" hidden="">
+			<form>
+
+				<div class="field">
+					<input type="text" name="card" placeholder="Card Number" id="card_num">
+				</div>
+				<div class="field">
+					<input type="text" name="name" placeholder="Name on Card" id="name">
+				</div>
+				<div class="field">
+					<input type="text" name="cvv" placeholder="CVV" id="cvv">
+				</div>
+				<label>Expiry</label>
+				<div class="field">
+					<select name="month" style="width:65px;" id="month">
+						<option value=""></option>
+						<option value="1">Jan</option>
+						<option value="2">Feb</option>
+						<option value="3">Mar</option>
+						<option value="4">Apr</option>
+						<option value="5">May</option>
+						<option value="6">June</option>
+						<option value="7">july</option>
+						<option value="8">Aug</option>
+						<option value="9">Sep</option>
+						<option value="10">Oct</option>
+						<option value="11">Nov</option>
+						<option value="12">Dec</option>
+					</select>
+					<select name="year" style="width:85px;" id="year">
+						<option value=""></option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+						<option value="2021">2021</option>
+						<option value="2022">2022</option>
+						<option value="2023">2023</option>
+						<option value="2024">2024</option>
+						<option value="2025">2025</option>
+						<option value="2026">2026</option>
+						<option value="2027">2027</option>
+						<option value="2028">2028</option>
+					</select>
+				</div>
+			</form>
+			<br>
+			<button onclick="pay()">Check Out</button>
+			<button onclick="back()">Back</button>
+		</div>
+	</div>
+<script type="text/javascript" src="pizza.js"></script>
+</body>
+<footer>&copy;This page is created by Priyanka</footer>
+</html>
